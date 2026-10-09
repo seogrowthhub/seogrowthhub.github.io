@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SEO Growth Hub provides SEO guides, keyword research, digital marketing tips and link building resources.">
+  <meta name="robots" content="index, follow">
+  <title>SEO Growth Hub | Grow Your Website</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      line-height: 1.7;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    header h2 { margin: 0; color: #38bdf8; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 14px;
+    }
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #0f172a, #075985);
+      color: white;
+    }
+    .hero h1 { font-size: 38px; line-height: 1.2; }
+    .hero p { max-width: 650px; margin: 20px auto; }
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 12px 22px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section { padding: 45px 7%; }
+    .center { text-align: center; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px #0f172a12;
+    }
+    .card h3 { color: #0369a1; }
+    .card a { color: #0369a1; font-weight: bold; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
+    }
+    @media(max-width:600px) {
+      .hero h1 { font-size: 30px; }
+      nav a { margin-left: 5px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>SEO Growth Hub</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#resources">Resources</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1>Grow Your Website with Smarter SEO</h1>
+    <p>
+      Learn keyword research, on-page SEO, link building and digital
+      marketing strategies to improve your online presence.
+    </p>
+    <a class="btn" href="#resources">Explore Free Resources</a>
+  </section>
+
+  <section id="resources">
+    <h2 class="center">SEO Resources</h2>
+    <p class="center">Practical guides to help you grow your website.</p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Keyword Research</h3>
+        <p>Discover relevant search terms and learn how to find useful
+        keywords for your website.</p>
+        <a href="keyword-research.html">Read Guide →</a>
+      </article>
+
+      <article class="card">
+        <h3>Digital Marketing</h3>
+        <p>Explore digital marketing fundamentals, content strategy
+        and ways to reach your target audience.</p>
+        <a href="digital-marketing.html">Read Guide →</a>
+      </article>
+
+      <article class="card">
+        <h3>Link Building</h3>
+        <p>Learn ethical outreach, guest posting and backlink
+        strategies to build website authority.</p>
+        <a href="link-building.html">Read Guide →</a>
+      </article>
+
+      <article class="card">
+        <h3>SEO Basics</h3>
+        <p>Understand technical SEO, on-page optimization and
+        search engine fundamentals.</p>
+        <a href="seo-basics.html">Read Guide →</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About SEO Growth Hub</h2>
+    <p>
+      SEO Growth Hub is an educational platform for people who want
+      to learn SEO, keyword research, content marketing and
+      link building through straightforward guides.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or business inquiry? Contact us by email.</p>
+    <a class="btn" href="mailto:contact@seogrowthhub.com">Email Us</a>
+    <p>Replace this email with your actual contact email address.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> SEO Growth Hub. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
