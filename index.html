@@ -1,283 +1,974 @@
+HTML
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-27K11N3GH7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Analytics: preserved -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27K11N3GH7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-27K11N3GH7');
+    </script>
 
-  gtag('config', 'G-27K11N3GH7');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SEO Growth Hub | SEO Guides & Digital Marketing</title>
-
-    <meta name="description" content="Learn SEO step by step with practical guides on keyword research, on-page SEO, technical SEO, and digital marketing to grow your website organically.">
-
+    <meta name="description" content="Grow your online presence with practical SEO guides, keyword research, technical SEO tips, and digital marketing resources from SEO Growth Hub.">
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://seogrowthhub.github.io/">
 
-    <!-- Google Search Console Verification -->
+    <!-- Google Search Console Verification: preserved -->
     <meta name="google-site-verification" content="P90iHOreCUZ0LeQnErD7xI6D627J0L2Z9Ekni9Whbb4">
 
+    <meta name="theme-color" content="#0b1220">
+
     <style>
+        :root {
+            --navy: #0b1220;
+            --navy-light: #111e32;
+            --green: #48e09a;
+            --green-dark: #15945b;
+            --white: #ffffff;
+            --muted: #aab8ca;
+            --text: #263449;
+            --light: #f5f8fc;
+            --border: #e5eaf1;
+            --radius: 18px;
+            --shadow: 0 12px 35px rgba(11, 18, 32, .08);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.7;
-            color: #263247;
-            background: #f5f8fc;
+            color: var(--text);
+            background: var(--light);
         }
 
-        header {
-            background: #102a43;
-            color: white;
-            padding: 22px 7%;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #58d5c9;
-        }
-
-        nav a {
-            color: white;
+        a {
             text-decoration: none;
-            margin-left: 16px;
         }
 
+        a:focus-visible {
+            outline: 3px solid var(--green);
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin-inline: auto;
+        }
+
+        /* Header and CSS-built brand logo */
+        .site-header {
+            background: var(--navy);
+            color: var(--white);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .nav-wrap {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -.5px;
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 13px;
+            background: var(--green);
+            color: var(--navy);
+            font-size: 21px;
+            font-weight: 900;
+            box-shadow: 0 5px 18px rgba(72,224,154,.18);
+        }
+
+        .brand span:last-child span {
+            color: var(--green);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 23px;
+        }
+
+        .nav-links a {
+            color: #dce5f0;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color .2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-links .nav-cta {
+            padding: 10px 16px;
+            background: var(--green);
+            color: var(--navy);
+            border-radius: 9px;
+        }
+
+        .nav-links .nav-cta:hover {
+            background: #73edb3;
+            color: var(--navy);
+        }
+
+        /* Hero */
         .hero {
-            text-align: center;
-            padding: 85px 7%;
-            background: linear-gradient(135deg, #102a43, #176b87);
-            color: white;
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+            background:
+                radial-gradient(ellipse at 85% 15%, rgba(72,224,154,.14), transparent 32%),
+                linear-gradient(135deg, #0b1220 0%, #111e32 65%, #142b3b 100%);
+            padding: 100px 0 94px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 7px 13px;
+            margin-bottom: 23px;
+            color: var(--green);
+            border: 1px solid rgba(72,224,154,.3);
+            border-radius: 100px;
+            background: rgba(72,224,154,.07);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--green);
         }
 
         .hero h1 {
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.2;
-            margin-bottom: 20px;
+            max-width: 720px;
+            margin-bottom: 22px;
+            font-size: clamp(38px, 5.4vw, 64px);
+            line-height: 1.12;
+            letter-spacing: -2px;
         }
 
-        .hero p {
-            max-width: 700px;
-            margin: 0 auto 25px;
-            font-size: 18px;
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero-copy {
+            max-width: 630px;
+            margin-bottom: 30px;
+            color: #bdc9d9;
+            font-size: 17px;
+        }
+
+        .button-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 13px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 12px 23px;
-            background: #58d5c9;
-            color: #102a43;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            min-height: 48px;
+            padding: 13px 21px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 800;
+            transition: transform .2s ease, background .2s ease;
         }
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 20px;
+        .btn:hover {
+            transform: translateY(-2px);
         }
 
-        .section-title {
+        .btn-primary {
+            color: var(--navy);
+            background: var(--green);
+            box-shadow: 0 8px 24px rgba(72,224,154,.15);
+        }
+
+        .btn-primary:hover {
+            background: #73edb3;
+        }
+
+        .btn-outline {
+            color: var(--white);
+            border: 1px solid #435269;
+            background: rgba(255,255,255,.03);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.09);
+        }
+
+        .hero-visual {
+            position: relative;
+            padding: 27px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 23px;
+            background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+            box-shadow: 0 25px 70px rgba(0,0,0,.18);
+        }
+
+        .visual-top {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 25px;
+        }
+
+        .visual-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #617087;
+        }
+
+        .visual-label {
+            margin-left: auto;
+            color: #aab8ca;
+            font-size: 11px;
+            letter-spacing: .7px;
+        }
+
+        .visual-title {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .metric {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 15px 0;
+            border-top: 1px solid rgba(255,255,255,.1);
+        }
+
+        .metric-name {
+            color: #c3cedd;
+            font-size: 13px;
+        }
+
+        .metric-tag {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .visual-note {
+            margin-top: 18px;
+            color: #92a3b8;
+            font-size: 11px;
+        }
+
+        /* Shared sections */
+        .section {
+            padding: 78px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin: 0 auto 37px;
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        .section-title h2 {
-            font-size: 30px;
-            color: #102a43;
+        .section-kicker {
+            margin-bottom: 9px;
+            color: var(--green-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
-        .cards {
+        .section-heading h2,
+        .about-copy h2,
+        .service-copy h2 {
+            margin-bottom: 13px;
+            color: var(--navy);
+            font-size: clamp(27px, 3.5vw, 38px);
+            line-height: 1.2;
+            letter-spacing: -.8px;
+        }
+
+        .section-heading p {
+            color: #66758a;
+            font-size: 16px;
+        }
+
+        .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 22px;
         }
 
-        .card,
+        .card {
+            position: relative;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: 0 4px 18px rgba(11,18,32,.035);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #b9e9d0;
+            box-shadow: var(--shadow);
+        }
+
+        .card-icon {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 22px;
+            border-radius: 14px;
+            color: #137b4c;
+            background: #e5f9ee;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--navy);
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #69778b;
+            font-size: 14px;
+        }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 20px;
+            color: #12804f;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .text-link:hover {
+            color: #075c36;
+        }
+
+        /* Articles */
+        .articles-section {
+            background: #edf2f8;
+        }
+
         .article-card {
-            background: white;
-            padding: 26px;
-            border-radius: 12px;
-            box-shadow: 0 4px 18px rgba(16, 42, 67, 0.07);
+            padding: 0;
+            overflow: hidden;
         }
 
-        .card h3,
-        .article-card h3 {
-            color: #176b87;
-            margin-bottom: 12px;
+        .article-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 17px 23px;
+            color: #dfe9f6;
+            background: var(--navy-light);
+            font-size: 12px;
+            font-weight: 700;
         }
 
-        .card a,
-        .article-card a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #087f8c;
-            font-weight: bold;
-            text-decoration: none;
+        .article-top span:last-child {
+            color: var(--green);
         }
 
-        .articles {
-            margin-top: 50px;
+        .article-content {
+            padding: 24px;
         }
 
-        .about {
-            background: white;
-            padding: 30px;
-            margin-top: 45px;
-            border-radius: 12px;
-        }  
+        .article-content h3 {
+            font-size: 19px;
+        }
 
-        footer {
-            background: #102a43;
+        /* Services */
+        .services-section {
+            padding: 78px 0;
+            background: var(--navy);
             color: white;
+        }
+
+        .service-panel {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 40px;
+            padding: 42px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 22px;
+            background:
+                radial-gradient(ellipse at 100% 0%, rgba(72,224,154,.1), transparent 42%),
+                #111e32;
+        }
+
+        .service-copy .section-kicker {
+            color: var(--green);
+        }
+
+        .service-copy h2 {
+            color: white;
+        }
+
+        .service-copy p {
+            max-width: 570px;
+            color: #b8c5d6;
+        }
+
+        .service-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 15px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 12px;
+            background: rgba(255,255,255,.035);
+        }
+
+        .check {
+            display: grid;
+            flex: 0 0 25px;
+            place-items: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 8px;
+            color: var(--navy);
+            background: var(--green);
+            font-weight: 900;
+        }
+
+        .service-item strong {
+            display: block;
+            margin-bottom: 3px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .service-item p {
+            color: #aebdd0;
+            font-size: 12px;
+        }
+
+        .service-copy .button-row {
+            margin-top: 25px;
+        }
+
+        /* About and contact */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .info-panel {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: white;
+        }
+
+        .info-panel h2 {
+            margin-bottom: 12px;
+            color: var(--navy);
+            font-size: 24px;
+        }
+
+        .info-panel p {
+            color: #69778b;
+            font-size: 14px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            margin-top: 14px;
+            color: #12804f;
+            font-weight: 800;
+            overflow-wrap: anywhere;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 37px 0 22px;
+            color: #b9c6d6;
+            background: #070d17;
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding-bottom: 27px;
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+        .footer-brand p {
+            max-width: 340px;
+            margin-top: 13px;
+            color: #93a3b8;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 17px;
+        }
+
+        .footer-links a {
+            color: #d5deea;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--green);
+        }
+
+        .copyright {
+            padding-top: 20px;
+            color: #8291a6;
+            font-size: 12px;
             text-align: center;
-            padding: 25px 15px;
         }
 
-        footer a {
-            color: #58d5c9;
-            margin: 0 8px;
-        }
-
-        @media (max-width: 600px) {
-            nav {
+        @media (max-width: 850px) {
+            .nav-wrap {
+                padding: 17px 0;
+                align-items: flex-start;
                 flex-direction: column;
             }
 
-            nav a {
-                margin: 0 6px;
+            .nav-links {
+                justify-content: flex-start;
+                gap: 14px 19px;
+            }
+
+            .hero-grid,
+            .service-panel {
+                grid-template-columns: 1fr;
             }
 
             .hero {
-                padding: 60px 20px;
+                padding: 72px 0;
+            }
+
+            .hero-visual {
+                max-width: 520px;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: min(100% - 34px, 1120px);
+            }
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .brand-mark {
+                width: 39px;
+                height: 39px;
+            }
+
+            .nav-links {
+                gap: 12px 16px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+            }
+
+            .nav-links .nav-cta {
+                padding: 8px 11px;
+            }
+
+            .hero {
+                padding: 59px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.2px;
+            }
+
+            .hero-copy {
+                font-size: 15px;
+            }
+
+            .button-row {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-visual {
+                padding: 21px;
+            }
+
+            .section,
+            .services-section {
+                padding: 58px 0;
+            }
+
+            .card-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 23px;
+            }
+
+            .service-panel {
+                padding: 24px;
+                gap: 26px;
+            }
+
+            .info-panel {
+                padding: 24px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition-duration: .01ms !important;
             }
         }
     </style>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="SEO Growth Hub home">
+                <span class="brand-mark" aria-hidden="true">S<span style="color:#ffffff">G</span></span>
+                <span>SEO Growth <span>Hub</span></span>
+            </a>
 
-<header>
-    <nav>
-        <div class="logo">SEO Growth Hub</div>
-        <div>
-            
-<a href="index.html">Home</a>
-<a href="technical-seo.html">SEO Guides</a>
-<a href="what-is-seo.html">Articles</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="#guides">SEO Guides</a>
+                <a href="#articles">Articles</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a class="nav-cta" href="#contact">Contact Us ↗</a>
+            </nav>
         </div>
-    </nav>
-</header>
+    </header>
 
-<section class="hero" id="home">
-    <h1>Grow Your Website with Smart SEO</h1>
-    <p>
-        Discover practical SEO strategies, keyword research techniques,
-        and digital marketing resources to build your online presence.
-    </p>
-    <a class="btn" href="#guides">Explore SEO Guides</a>
-</section>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <div class="eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    Learn. Optimize. Grow.
+                </div>
 
-<main>
+                <h1>Grow Your Website with <span>Smarter SEO.</span></h1>
 
-    <section id="guides">
-        <div class="section-title">
-            <h2>Explore Our Resources</h2>
-            <p>Learn the fundamentals of SEO and digital marketing.</p>
-        </div>
+                <p class="hero-copy">
+                    Practical SEO guides, keyword research strategies, and digital
+                    marketing resources to help you build a stronger online presence.
+                </p>
 
-        <div class="cards">
-            <article class="card">
-                <h3>SEO Basics</h3>
-                <p>Understand on-page SEO, technical SEO, and how search engines discover your website.</p>
-                <a href="what-is-seo.html">Learn More →</a>
-            </article>
+                <div class="button-row">
+                    <a class="btn btn-primary" href="#guides">Explore SEO Guides <span>→</span></a>
+                    <a class="btn btn-outline" href="#services">Explore SEO Services ↗</a>
+                </div>
+            </div>
 
-            <article class="card">
-                <h3>Keyword Research</h3>
-                <p>Learn how to find relevant keywords and understand what your audience searches for.</p>
-                <a href="keyword-research.html">Learn More →</a>
-            </article>
+            <div class="hero-visual" aria-label="SEO learning topics">
+                <div class="visual-top">
+                    <span class="visual-dot"></span>
+                    <span class="visual-dot"></span>
+                    <span class="visual-dot"></span>
+                    <span class="visual-label">YOUR SEO ROADMAP</span>
+                </div>
 
-            <article class="card">
-                <h3>Digital Marketing</h3>
-                <p>Explore content marketing, social media, and practical strategies for online growth.</p>
-                <a href="#contact">Explore More →</a>
-            </article>
-        </div>
-    </section>
+                <h2 class="visual-title">Build a stronger website</h2>
 
-    <section class="articles" id="articles">
-        <div class="section-title">
-            <h2>SEO Articles & Guides</h2>
-            <p>Explore practical SEO guides to improve your website and grow organic traffic.</p>
-        </div>
+                <div class="metric">
+                    <span class="metric-name">01 / Keyword Research</span>
+                    <span class="metric-tag">Discover</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-name">02 / On-Page SEO</span>
+                    <span class="metric-tag">Optimize</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-name">03 / Technical SEO</span>
+                    <span class="metric-tag">Improve</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-name">04 / Content Strategy</span>
+                    <span class="metric-tag">Grow</span>
+                </div>
 
-        <div class="cards">
-
-            <article class="article-card">
-                <h3>What Is SEO? A Beginner's Guide</h3>
-                <p>Learn SEO basics, crawling, indexing, ranking, and how to improve your website's visibility.</p>
-                <a href="what-is-seo.html">Read the Complete Guide →</a>
-            </article>
-
-            <article class="article-card">
-                <h3>Keyword Research for Beginners</h3>
-                <p>Discover keyword ideas, free research tools, search intent, and practical SEO techniques.</p>
-                <a href="keyword-research.html">Read the Complete Guide →</a>
-            </article>
-
+                <p class="visual-note">Practical learning for website owners, bloggers, and businesses.</p>
+            </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <h2>About SEO Growth Hub</h2>
-        <p>
-            SEO Growth Hub is a learning resource for website owners,
-            bloggers, freelancers, and beginners who want to improve their
-            SEO knowledge and digital marketing skills.
-        </p>
-    </section>
+    <main>
+        <section class="section" id="guides">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-kicker">Explore and Learn</div>
+                    <h2>SEO Knowledge That Moves You Forward</h2>
+                    <p>Build your knowledge step by step with clear, practical digital marketing resources.</p>
+                </div>
 
-    <section class="about" id="contact">
-        <h2>Contact Us</h2>
-        <p>Have a question or suggestion? Contact us by email.</p>
-        <p><strong>Email:</strong> randeorout@gmail.com.</p>
-    </section>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">↗</div>
+                        <h3>SEO Basics</h3>
+                        <p>Understand how search engines crawl, index, and rank websites, and learn the foundations of SEO.</p>
+                        <a class="text-link" href="what-is-seo.html">Start Learning <span>→</span></a>
+                    </article>
 
-</main>
-<p><a href="https://seogrowthhub.github.io/privacy-policy.html">Privacy Policy</a></p>
-<footer>. 
-    <p><a href="contact.html">Contact Us</a></p>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">⌕</div>
+                        <h3>Keyword Research</h3>
+                        <p>Discover useful keyword ideas, search intent, and ways to understand what your audience needs.</p>
+                        <a class="text-link" href="keyword-research.html">Find Keywords <span>→</span></a>
+                    </article>
 
-    <p>© 2026 SEO Growth Hub. All rights reserved.</p>
-    <p><a href="https://seogrowthhub.github.io/">Home</a></p>
-</footer>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">⚙</div>
+                        <h3>Technical SEO</h3>
+                        <p>Learn about site structure, indexing, page accessibility, and technical improvements.</p>
+                        <a class="text-link" href="technical-seo.html">Explore Technical SEO <span>→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <section class="section articles-section" id="articles">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="section-kicker">From the Learning Hub</div>
+                    <h2>SEO Articles & Guides</h2>
+                    <p>Explore beginner-friendly guides designed to help you make informed SEO improvements.</p>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card article-card">
+                        <div class="article-top">
+                            <span>SEO FUNDAMENTALS</span>
+                            <span>Beginner</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>What Is SEO? A Beginner's Guide</h3>
+                            <p>Learn the basics of crawling, indexing, ranking, and improving your website's search visibility.</p>
+                            <a class="text-link" href="what-is-seo.html">Read the Guide <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card article-card">
+                        <div class="article-top">
+                            <span>KEYWORD STRATEGY</span>
+                            <span>Beginner</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Keyword Research for Beginners</h3>
+                            <p>Discover keyword ideas, search intent, and practical ways to plan relevant website content.</p>
+                            <a class="text-link" href="keyword-research.html">Read the Guide <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="card article-card">
+                        <div class="article-top">
+                            <span>WEBSITE OPTIMIZATION</span>
+                            <span>Guide</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Improve Your On-Page SEO</h3>
+                            <p>Learn about page titles, headings, helpful content, and internal links.</p>
+                            <a class="text-link" href="on-page-seo.html">Read the Guide <span>→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="service-panel">
+                    <div class="service-copy">
+                        <div class="section-kicker">SEO Services</div>
+                        <h2>Looking to Improve Your Website?</h2>
+                        <p>
+                            Explore support for keyword research, on-page optimization,
+                            content planning, and website SEO reviews. Get in touch to
+                            discuss your goals and the work your website may need.
+                        </p>
+
+                        <div class="button-row">
+                            <a class="btn btn-primary" href="#contact">Discuss Your Project ↗</a>
+                            <a class="btn btn-outline" href="technical-seo.html">Explore SEO Guides</a>
+                        </div>
+                    </div>
+
+                    <div class="service-list">
+                        <div class="service-item">
+                            <span class="check" aria-hidden="true">✓</span>
+                            <div>
+                                <strong>Keyword Research</strong>
+                                <p>Find relevant topics and search terms for your audience.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="check" aria-hidden="true">✓</span>
+                            <div>
+                                <strong>On-Page SEO</strong>
+                                <p>Review page structure, headings, metadata, and internal links.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="check" aria-hidden="true">✓</span>
+                            <div>
+                                <strong>Content & SEO Guidance</strong>
+                                <p>Plan useful content around real visitor questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="info-panel">
+                    <div class="section-kicker">About Us</div>
+                    <h2>Welcome to SEO Growth Hub</h2>
+                    <p>
+                        SEO Growth Hub is a learning resource for website owners,
+                        bloggers, freelancers, and beginners who want to understand
+                        search engine optimization and digital marketing through
+                        practical, accessible guides.
+                    </p>
+                    <a class="text-link" href="about.html">Learn More About Us →</a>
+                </div>
+
+                <div class="info-panel" id="contact">
+                    <div class="section-kicker">Get in Touch</div>
+                    <h2>Let's Talk About Your Goals</h2>
+                    <p>
+                        Have a question, suggestion, or SEO project in mind?
+                        Email us to start a conversation.
+                    </p>
+                    <a class="contact-email" href="mailto:randeorout@gmail.com">randeorout@gmail.com</a>
+                    <div>
+                        <a class="text-link" href="mailto:randeorout@gmail.com?subject=SEO%20Growth%20Hub%20Inquiry">Send an Email ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a class="brand" href="index.html">
+                        <span class="brand-mark" aria-hidden="true">S<span style="color:#ffffff">G</span></span>
+                        <span>SEO Growth <span>Hub</span></span>
+                    </a>
+                    <p>Practical SEO knowledge and digital marketing resources to help you grow online.</p>
+                </div>
+
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="what-is-seo.html">SEO Guides</a>
+                    <a href="keyword-research.html">Keyword Research</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </nav>
+            </div>
+
+            <p class="copyright">© 2026 SEO Growth Hub. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
