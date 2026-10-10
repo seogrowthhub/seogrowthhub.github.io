@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free SEO Tools | SEO Growth Hub</title>
+  <meta name="description" content="Use free SEO tools from SEO Growth Hub: title and meta preview, word counter, URL slug generator, robots.txt generator, FAQ schema generator and UTM builder.">
+  <link rel="canonical" href="https://seogrowthhub.github.io/seo-tools.html">
+  <meta name="google-site-verification" content="P90iHOreCUZ0LeQnErD7xI6D627J0L2Z9Ekni9Whbb4">
+  <meta name="theme-color" content="#0b1220">
+  <style>
+    :root{--navy:#0b1220;--panel:#111c2f;--panel2:#17243a;--white:#f7fafc;--muted:#b7c4d6;--green:#39d98a;--line:#2a3a52}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--navy);color:var(--white);font:16px/1.6 Arial,Helvetica,sans-serif}
+    a{color:var(--green)}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{border-bottom:1px solid var(--line);background:#0b1220}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0;flex-wrap:wrap}
+    .brand{font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none}.brand span{color:var(--green)}
+    nav{display:flex;gap:15px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-size:.94rem}nav a:hover{color:var(--green)}
+    .hero{padding:48px 0 28px}.eyebrow{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+    h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;margin:10px 0 14px}
+    .hero p{max-width:760px;color:var(--muted);margin:0}
+    .tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:18px 0 48px}
+    .tool{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;min-width:0}
+    .tool h2{font-size:1.22rem;margin:0 0 6px}.tool p{color:var(--muted);font-size:.92rem;margin:0 0 16px}
+    label{display:block;font-weight:700;margin:12px 0 6px;font-size:.9rem}
+    input,textarea,select{display:block;width:100%;padding:11px 12px;border-radius:9px;border:1px solid #3a4b64;background:#0b1424;color:#fff;font:inherit}
+    textarea{min-height:100px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid var(--green);outline-offset:1px}
+    button{border:0;border-radius:9px;background:var(--green);color:#062014;font-weight:800;padding:11px 15px;margin:12px 8px 0 0;cursor:pointer;font:inherit}
+    button.secondary{background:#25364e;color:#fff;border:1px solid #40516a}
+    .output{margin-top:14px;padding:13px;background:#0b1424;border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+    .muted{color:var(--muted)}.count{font-weight:700;color:var(--green)}
+    .serp-title{color:#8ab4f8;font-size:1.12rem;margin:0}.serp-url{color:#b8d7b0;font-size:.83rem;overflow-wrap:anywhere}.serp-desc{color:#d2d8e2;font-size:.9rem;margin:4px 0 0}
+    .note{font-size:.82rem;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.tools{grid-template-columns:1fr}.nav{align-items:flex-start}.hero{padding-top:34px}.tool{padding:18px}}
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-27K11N3GH7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-27K11N3GH7');
+  </script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">SEO <span>Growth Hub</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="seo-services.html">SEO Services</a>
+      <a href="seo-tools.html">Free SEO Tools</a>
+      <a href="what-is-seo.html">SEO Guides</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Free tools · Simple · Browser-based</div>
+    <h1>Free SEO Tools</h1>
+    <p>Make everyday SEO tasks easier with these free tools. Enter your text or details, generate a result, and copy it for your project. Your inputs are processed in this page and are not sent to a server by these tools.</p>
+  </section>
+  <section class="tools" aria-label="SEO tools">
+    <article class="tool">
+      <h2>1. Title &amp; Meta Description Preview</h2>
+      <p>Preview how a page title and description may look in a search result. Display length is only an estimate.</p>
+      <label for="seoTitle">Page title</label>
+      <input id="seoTitle" maxlength="200" placeholder="Example: Free SEO Tools for Beginners">
+      <label for="seoUrl">Page URL</label>
+      <input id="seoUrl" type="url" placeholder="https://example.com/page">
+      <label for="seoDescription">Meta description</label>
+      <textarea id="seoDescription" maxlength="400" placeholder="Write a useful summary of this page..."></textarea>
+      <div class="output">
+        <p class="serp-title" id="previewTitle">Your page title preview</p>
+        <div class="serp-url" id="previewUrl">https://example.com/page</div>
+        <p class="serp-desc" id="previewDescription">Your meta description preview will appear here.</p>
+      </div>
+      <p class="note"><span id="titleCount">0</span> title characters · <span id="descriptionCount">0</span> description characters. Google may show a different title or snippet.</p>
+    </article>
+
+    <article class="tool">
+      <h2>2. Word Counter</h2>
+      <p>Count words, characters, characters without spaces, and approximate reading time.</p>
+      <label for="wordText">Paste or type your text</label>
+      <textarea id="wordText" placeholder="Paste your article or paragraph here..."></textarea>
+      <div class="output" aria-live="polite">
+        <div>Words: <span class="count" id="wordCount">0</span></div>
+        <div>Characters: <span class="count" id="charCount">0</span></div>
+        <div>Characters without spaces: <span class="count" id="noSpaceCount">0</span></div>
+        <div>Estimated reading time: <span class="count" id="readTime">0 min</span></div>
+      </div>
+      <button type="button" class="secondary" id="clearText">Clear text</button>
+    </article>
+
+    <article class="tool">
+      <h2>3. URL Slug Generator</h2>
+      <p>Turn a heading or title into a clean, lowercase URL slug.</p>
+      <label for="slugInput">Page title or heading</label>
+      <input id="slugInput" placeholder="Example: Beginner's Guide to On-Page SEO!">
+      <button type="button" id="makeSlug">Generate slug</button>
+      <div class="output"><strong>Slug:</strong> <span id="slugOutput">your-url-slug</span></div>
+      <button type="button" class="secondary" id="copySlug">Copy slug</button>
+      <p class="note">This tool removes punctuation and converts spaces to hyphens. Review the slug before publishing.</p>
+    </article>
+
+    <article class="tool">
+      <h2>4. Robots.txt Generator</h2>
+      <p>Create a basic robots.txt template. Check your site's setup before using it; robots.txt is not a security feature.</p>
+      <label for="robotsSite">Website origin</label>
+      <input id="robotsSite" type="url" placeholder="https://example.com">
+      <label for="robotsMode">Crawler access</label>
+      <select id="robotsMode">
+        <option value="all">Allow all crawlers</option>
+        <option value="block">Block all crawlers (not recommended for public sites)</option>
+        <option value="wp">Common WordPress template (blocks admin area)</option>
+      </select>
+      <label for="robotsExtra">Optional extra disallow path (one path, e.g. /private/)</label>
+      <input id="robotsExtra" placeholder="/private/">
+      <button type="button" id="makeRobots">Generate robots.txt</button>
+      <textarea id="robotsOutput" readonly aria-label="Generated robots.txt"></textarea>
+      <button type="button" class="secondary" id="copyRobots">Copy robots.txt</button>
+      <p class="note">Only add paths you actually want crawlers to skip. Do not block CSS or JavaScript needed to render your pages.</p>
+    </article>
+
+    <article class="tool">
+      <h2>5. FAQ Schema Generator</h2>
+      <p>Generate JSON-LD FAQ markup for real questions and answers visible on your page.</p>
+      <label for="faqQ1">Question 1</label>
+      <input id="faqQ1" placeholder="What is SEO?">
+      <label for="faqA1">Answer 1</label>
+      <textarea id="faqA1" placeholder="Write a clear, factual answer..."></textarea>
+      <label for="faqQ2">Question 2 (optional)</label>
+      <input id="faqQ2" placeholder="Why is keyword research useful?">
+      <label for="faqA2">Answer 2 (optional)</label>
+      <textarea id="faqA2" placeholder="Write the answer..."></textarea>
+      <button type="button" id="makeFaq">Generate FAQ schema</button>
+      <textarea id="faqOutput" readonly aria-label="Generated FAQ schema"></textarea>
+      <button type="button" class="secondary" id="copyFaq">Copy schema</button>
+      <p class="note">Valid markup does not guarantee a rich result. Google limits FAQ rich results mainly to well-known government and health sites. Keep markup consistent with visible page content.</p>
+    </article>
+
+    <article class="tool">
+      <h2>6. UTM Link Builder</h2>
+      <p>Add campaign tracking parameters to a URL for analytics reporting.</p>
+      <label for="utmUrl">Destination URL (include https://)</label>
+      <input id="utmUrl" type="url" placeholder="https://example.com/product">
+      <label for="utmSource">Campaign source (required)</label>
+      <input id="utmSource" placeholder="facebook">
+      <label for="utmMedium">Campaign medium (required)</label>
+      <input id="utmMedium" placeholder="social">
+      <label for="utmCampaign">Campaign name (required)</label>
+      <input id="utmCampaign" placeholder="october_promo">
+      <label for="utmTerm">Campaign term (optional)</label>
+      <input id="utmTerm" placeholder="seo tools">
+      <label for="utmContent">Campaign content (optional)</label>
+      <input id="utmContent" placeholder="green_button">
+      <button type="button" id="makeUtm">Build UTM link</button>
+      <div class="output" id="utmOutput" aria-live="polite">Your tracked URL will appear here.</div>
+      <button type="button" class="secondary" id="copyUtm">Copy UTM link</button>
+      <p class="note">Use consistent lowercase campaign naming where possible. Do not put personal or confidential information in tracking parameters.</p>
+    </article>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>SEO Growth Hub provides these tools for general informational use. Always review generated output before publishing. Search engines may change how they display or use page information.</p>
+    <p><a href="privacy-policy.html">Privacy Policy</a> · <a href="contact.html">Contact</a> · © 2026 SEO Growth Hub</p>
+  </div>
+</footer>
+<script>
+  const byId = id => document.getElementById(id);
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => alert('Copied!')).catch(() => fallbackCopy(text));
+    } else fallbackCopy(text);
+  }
+  function fallbackCopy(text) {
+    const box = document.createElement('textarea');
+    box.value = text; box.style.position = 'fixed'; box.style.opacity = '0';
+    document.body.appendChild(box); box.select();
+    try { document.execCommand('copy'); alert('Copied!'); } catch(e) { alert('Copy failed. Please select and copy the text manually.'); }
+    box.remove();
+  }
+
+  function updatePreview() {
+    const title = byId('seoTitle').value;
+    const url = byId('seoUrl').value.trim();
+    const description = byId('seoDescription').value;
+    byId('previewTitle').textContent = title || 'Your page title preview';
+    byId('previewUrl').textContent = url || 'https://example.com/page';
+    byId('previewDescription').textContent = description || 'Your meta description preview will appear here.';
+    byId('titleCount').textContent = title.length;
+    byId('descriptionCount').textContent = description.length;
+  }
+  ['seoTitle','seoUrl','seoDescription'].forEach(id => byId(id).addEventListener('input', updatePreview));
+
+  function updateWordCount() {
+    const text = byId('wordText').value;
+    const trimmed = text.trim();
+    const words = trimmed ? (trimmed.match(/\S+/g) || []).length : 0;
+    byId('wordCount').textContent = words;
+    byId('charCount').textContent = text.length;
+    byId('noSpaceCount').textContent = text.replace(/\s/g, '').length;
+    byId('readTime').textContent = (words ? Math.max(1, Math.ceil(words / 200)) : 0) + ' min';
+  }
+  byId('wordText').addEventListener('input', updateWordCount);
+  byId('clearText').addEventListener('click', () => { byId('wordText').value=''; updateWordCount(); });
+
+  function makeSlug() {
+    const slug = byId('slugInput').value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()
+      .replace(/&/g,' and ').replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+    byId('slugOutput').textContent = slug || 'enter-a-title-first';
+  }
+  byId('makeSlug').addEventListener('click', makeSlug);
+  byId('slugInput').addEventListener('input', makeSlug);
+  byId('copySlug').addEventListener('click', () => copyText(byId('slugOutput').textContent));
+
+  function makeRobots() {
+    const site = byId('robotsSite').value.trim().replace(/\/+$/,'');
+    const extra = byId('robotsExtra').value.trim();
+    const mode = byId('robotsMode').value;
+    let result = '';
+    if (mode === 'block') result = 'User-agent: *\nDisallow: /\n';
+    else if (mode === 'wp') result = 'User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n';
+    else result = 'User-agent: *\nAllow: /\n';
+    if (extra) {
+      if (!extra.startsWith('/')) { alert('Extra path should begin with /.'); return; }
+      result += 'Disallow: ' + extra + '\n';
+    }
+    if (site && !/^https?:\/\/[^/]+$/i.test(site)) { alert('Enter only the website origin, for example https://example.com'); return; }
+    if (site) result += '\nSitemap: ' + site + '/sitemap.xml\n';
+    byId('robotsOutput').value = result;
+  }
+  byId('makeRobots').addEventListener('click', makeRobots);
+  byId('copyRobots').addEventListener('click', () => copyText(byId('robotsOutput').value));
+
+  function makeFaq() {
+    const entries = [];
+    for (let i=1;i<=2;i++) {
+      const q = byId('faqQ'+i).value.trim();
+      const a = byId('faqA'+i).value.trim();
+      if (q && a) entries.push({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}});
+      else if (q || a) { alert('For each FAQ, fill both the question and answer, or leave both empty.'); return; }
+    }
+    if (!entries.length) { alert('Please enter at least one complete question and answer.'); return; }
+    const data = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:entries};
+    byId('faqOutput').value = JSON.stringify(data, null, 2);
+  }
+  byId('makeFaq').addEventListener('click', makeFaq);
+  byId('copyFaq').addEventListener('click', () => copyText(byId('faqOutput').value));
+
+  let builtUtm = '';
+  function makeUtm() {
+    const rawUrl = byId('utmUrl').value.trim();
+    const source = byId('utmSource').value.trim();
+    const medium = byId('utmMedium').value.trim();
+    const campaign = byId('utmCampaign').value.trim();
+    if (!rawUrl || !source || !medium || !campaign) { alert('Please fill the URL, source, medium, and campaign name.'); return; }
+    try {
+      const url = new URL(rawUrl);
+      if (!['http:','https:'].includes(url.protocol)) throw new Error('bad protocol');
+      url.searchParams.set('utm_source', source);
+      url.searchParams.set('utm_medium', medium);
+      url.searchParams.set('utm_campaign', campaign);
+      const term = byId('utmTerm').value.trim();
+      const content = byId('utmContent').value.trim();
+      if (term) url.searchParams.set('utm_term', term); else url.searchParams.delete('utm_term');
+      if (content) url.searchParams.set('utm_content', content); else url.searchParams.delete('utm_content');
+      builtUtm = url.toString();
+      byId('utmOutput').textContent = builtUtm;
+    } catch(e) {
+      alert('Please enter a valid destination URL starting with https:// or http://');
+    }
+  }
+  byId('makeUtm').addEventListener('click', makeUtm);
+  byId('copyUtm').addEventListener('click', () => { if (builtUtm) copyText(builtUtm); else alert('Build a UTM link first.'); });
+</script>
+</body>
+</html>
