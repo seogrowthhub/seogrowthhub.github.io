@@ -2,34 +2,14 @@ XML
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://seogrowthhub.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/what-is-seo.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/keyword-research.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/on-page-seo.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/technical-seo.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/seo-tools.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/seo-services.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/about.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://seogrowthhub.github.io/privacy-policy.html</loc>
-  </url>
+  <url><loc>https://seogrowthhub.github.io/</loc></url>
+  <url><loc>https://seogrowthhub.github.io/what-is-seo.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/keyword-research.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/on-page-seo.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/technical-seo.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/seo-tools.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/seo-services.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/about.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/contact.html</loc></url>
+  <url><loc>https://seogrowthhub.github.io/privacy-policy.html</loc></url>
 </urlset>
