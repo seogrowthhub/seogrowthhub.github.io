@@ -1,8 +1,9 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Google Analytics: preserved -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-27K11N3GH7"></script>
   <script>
@@ -12,16 +13,55 @@ HTML
     gtag('config', 'G-27K11N3GH7');
   </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEO Growth Hub | SEO Guides, Tools &amp; Digital Marketing</title>
   <meta name="description" content="Learn SEO with beginner-friendly guides, keyword research tips, website optimization advice, free SEO tools and practical digital marketing resources.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#F7FAFC">
   <link rel="canonical" href="https://seogrowthhub.github.io/">
 
   <!-- Google Search Console Verification: preserved -->
   <meta name="google-site-verification" content="P90iHOreCUZ0LeQnErD7xI6D627J0L2Z9Ekni9Whbb4">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SEO Growth Hub">
+  <meta property="og:title" content="SEO Growth Hub | SEO Guides, Tools &amp; Digital Marketing">
+  <meta property="og:description" content="Beginner-friendly SEO guides, keyword research tips, free SEO tools and digital marketing resources.">
+  <meta property="og:url" content="https://seogrowthhub.github.io/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEO Growth Hub | SEO Guides, Tools &amp; Digital Marketing">
+  <meta name="twitter:description" content="Beginner-friendly SEO guides, keyword research tips, free SEO tools and digital marketing resources.">
+
+  <!-- Favicon (inline, so the browser does not request a missing favicon.ico) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23159B72'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3ESG%3C/text%3E%3C/svg%3E">
+
+  <!-- Faster image loading -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://seogrowthhub.github.io/#website",
+        "url": "https://seogrowthhub.github.io/",
+        "name": "SEO Growth Hub",
+        "description": "Beginner-friendly SEO guides, free SEO tools and digital marketing resources.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://seogrowthhub.github.io/#organization",
+        "name": "SEO Growth Hub",
+        "url": "https://seogrowthhub.github.io/",
+        "email": "randeorout@gmail.com"
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -61,7 +101,8 @@ HTML
       text-decoration: none;
     }
 
-    a:focus-visible {
+    a:focus-visible,
+    button:focus-visible {
       outline: 3px solid var(--green);
       outline-offset: 4px;
     }
@@ -69,6 +110,24 @@ HTML
     img {
       display: block;
       max-width: 100%;
+      height: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 10px;
+      z-index: 100;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: white;
+      background: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 10px;
     }
 
     .container {
@@ -327,6 +386,12 @@ HTML
     .section-heading p {
       color: var(--muted);
       font-size: 15px;
+    }
+
+    .section-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
     }
 
     .card-grid {
@@ -588,7 +653,9 @@ HTML
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      align-content: flex-start;
+      max-width: 520px;
+      gap: 12px 18px;
     }
 
     .footer-links a {
@@ -713,27 +780,29 @@ HTML
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="SEO Growth Hub home">
+      <a class="brand" href="/" aria-label="SEO Growth Hub home">
         <span class="brand-mark" aria-hidden="true">SG</span>
         <span class="brand-name">SEO Growth <span>Hub</span></span>
       </a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="#guides">SEO Guides</a>
         <a href="#articles">Articles</a>
-        <a href="#seo-tools">SEO Tools</a>
+        <a href="seo-tools.html">SEO Tools</a>
         <a href="#learning-video">SEO Video</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a class="nav-cta" href="#contact">Contact Us ↗</a>
+        <a href="seo-services.html">Services</a>
+        <a href="about.html">About</a>
+        <a class="nav-cta" href="contact.html">Contact Us ↗</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- HERO SECTION -->
     <section class="hero" id="home">
       <div class="container hero-grid">
@@ -747,7 +816,7 @@ HTML
           </p>
           <div class="button-row">
             <a class="btn btn-primary" href="#guides">Explore SEO Guides →</a>
-            <a class="btn btn-outline" href="#seo-tools">Explore Free SEO Tools ↗</a>
+            <a class="btn btn-outline" href="seo-tools.html">Use Free SEO Tools ↗</a>
           </div>
         </div>
 
@@ -756,6 +825,8 @@ HTML
             class="hero-image"
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
             alt="Website analytics dashboard displayed on a laptop"
+            width="1000"
+            height="750"
             fetchpriority="high">
 
           <div class="hero-visual">
@@ -803,9 +874,11 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Planning and researching a digital marketing strategy"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="card-content">
-              <div class="card-icon">↗</div>
+              <div class="card-icon" aria-hidden="true">↗</div>
               <h3>SEO Basics</h3>
               <p>
                 Understand how search engines crawl, index, and rank websites,
@@ -820,9 +893,11 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Analytics charts used to research keywords and website performance"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="card-content">
-              <div class="card-icon">⌕</div>
+              <div class="card-icon" aria-hidden="true">⌕</div>
               <h3>Keyword Research</h3>
               <p>
                 Discover keyword ideas, search intent, and ways to understand
@@ -837,9 +912,11 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Computer hardware representing website technology"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="card-content">
-              <div class="card-icon">⚙</div>
+              <div class="card-icon" aria-hidden="true">⚙</div>
               <h3>Technical SEO</h3>
               <p>
                 Learn about site structure, indexing, page accessibility,
@@ -870,6 +947,8 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Person learning online using a laptop"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="article-top">SEO FUNDAMENTALS · BEGINNER</div>
             <div class="article-content">
@@ -887,6 +966,8 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Laptop and notebook for content and keyword planning"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="article-top">KEYWORD STRATEGY · BEGINNER</div>
             <div class="article-content">
@@ -904,6 +985,8 @@ HTML
               class="card-image"
               src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
               alt="Website design displayed on a computer screen"
+              width="800"
+              height="600"
               loading="lazy">
             <div class="article-top">WEBSITE OPTIMIZATION · GUIDE</div>
             <div class="article-content">
@@ -926,47 +1009,88 @@ HTML
           <div class="section-kicker">Work Smarter</div>
           <h2>Free SEO Tools</h2>
           <p>
-            Explore simple tools to help you prepare website titles,
-            descriptions, and SEO tasks.
+            Six simple browser-based tools to help you prepare titles,
+            descriptions, URLs, robots.txt, FAQ markup and tracking links.
+            Nothing you type is sent to a server.
           </p>
         </div>
 
         <div class="card-grid">
           <article class="card tool-card">
             <div class="card-content">
-              <div class="card-icon">⌕</div>
-              <h3>SEO Tools Hub</h3>
+              <div class="card-icon" aria-hidden="true">Aa</div>
+              <h3>Title &amp; Meta Preview</h3>
               <p>
-                Explore available SEO utilities and practical resources
-                in one convenient place.
+                See how your page title and meta description may look in
+                search results, with a live character count.
               </p>
-              <a class="text-link" href="seo-tools.html">Explore SEO Tools →</a>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
             </div>
           </article>
 
           <article class="card tool-card">
             <div class="card-content">
-              <div class="card-icon">Aa</div>
-              <h3>Title &amp; Description</h3>
+              <div class="card-icon" aria-hidden="true">#</div>
+              <h3>Word Counter</h3>
               <p>
-                Learn how to write clear page titles and meta descriptions
-                that accurately describe your content.
+                Count words, characters and estimated reading time for your
+                articles and page copy.
               </p>
-              <a class="text-link" href="seo-tools.html">Open SEO Tools →</a>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
             </div>
           </article>
 
           <article class="card tool-card">
             <div class="card-content">
-              <div class="card-icon">✓</div>
-              <h3>SEO Checklist</h3>
+              <div class="card-icon" aria-hidden="true">/</div>
+              <h3>URL Slug Generator</h3>
               <p>
-                Review important SEO basics such as crawlability,
-                useful content, internal links, and mobile usability.
+                Turn a page title into a clean, lowercase, hyphen-separated
+                URL slug.
               </p>
-              <a class="text-link" href="seo-tools.html">View Resources →</a>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
             </div>
           </article>
+
+          <article class="card tool-card">
+            <div class="card-content">
+              <div class="card-icon" aria-hidden="true">⚙</div>
+              <h3>Robots.txt Generator</h3>
+              <p>
+                Create a basic robots.txt template for your website and
+                copy it in one click.
+              </p>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
+            </div>
+          </article>
+
+          <article class="card tool-card">
+            <div class="card-content">
+              <div class="card-icon" aria-hidden="true">?</div>
+              <h3>FAQ Schema Generator</h3>
+              <p>
+                Generate JSON-LD FAQ markup for real questions and answers
+                that appear on your page.
+              </p>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
+            </div>
+          </article>
+
+          <article class="card tool-card">
+            <div class="card-content">
+              <div class="card-icon" aria-hidden="true">↗</div>
+              <h3>UTM Link Builder</h3>
+              <p>
+                Add campaign tracking parameters to a URL for cleaner
+                analytics reporting.
+              </p>
+              <a class="text-link" href="seo-tools.html">Open Tool →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-actions">
+          <a class="btn btn-primary" href="seo-tools.html">Open All Free SEO Tools →</a>
         </div>
       </div>
     </section>
@@ -1034,18 +1158,18 @@ HTML
             <h2>Looking to Improve Your Website?</h2>
             <p>
               Explore support for keyword research, on-page optimization,
-              content planning, and website SEO reviews. Get in touch to
+              content planning, and website SEO audits. Get in touch to
               discuss your goals and the work your website may need.
             </p>
             <div class="button-row">
-              <a class="btn btn-primary" href="#contact">Discuss Your Project ↗</a>
-              <a class="btn btn-outline" href="#guides">Explore SEO Guides</a>
+              <a class="btn btn-primary" href="seo-services.html">View SEO Services →</a>
+              <a class="btn btn-outline" href="contact.html">Discuss Your Project ↗</a>
             </div>
           </div>
 
           <div class="service-list">
             <div class="service-item">
-              <span class="check">✓</span>
+              <span class="check" aria-hidden="true">✓</span>
               <div>
                 <strong>Keyword Research</strong>
                 <p>Find relevant topics and search terms for your audience.</p>
@@ -1053,7 +1177,7 @@ HTML
             </div>
 
             <div class="service-item">
-              <span class="check">✓</span>
+              <span class="check" aria-hidden="true">✓</span>
               <div>
                 <strong>On-Page SEO</strong>
                 <p>Review page structure, headings, metadata, and internal links.</p>
@@ -1061,7 +1185,15 @@ HTML
             </div>
 
             <div class="service-item">
-              <span class="check">✓</span>
+              <span class="check" aria-hidden="true">✓</span>
+              <div>
+                <strong>Website SEO Audit</strong>
+                <p>Check broken links, indexing concerns, page structure and sitemap setup.</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <span class="check" aria-hidden="true">✓</span>
               <div>
                 <strong>Content &amp; SEO Guidance</strong>
                 <p>Plan useful content around real visitor questions.</p>
@@ -1112,7 +1244,7 @@ HTML
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a class="brand" href="index.html">
+          <a class="brand" href="/">
             <span class="brand-mark" aria-hidden="true">SG</span>
             <span class="brand-name">SEO Growth <span>Hub</span></span>
           </a>
@@ -1123,10 +1255,13 @@ HTML
         </div>
 
         <nav class="footer-links" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="what-is-seo.html">SEO Guides</a>
+          <a href="/">Home</a>
+          <a href="what-is-seo.html">What Is SEO?</a>
           <a href="keyword-research.html">Keyword Research</a>
+          <a href="on-page-seo.html">On-Page SEO</a>
+          <a href="technical-seo.html">Technical SEO</a>
           <a href="seo-tools.html">SEO Tools</a>
+          <a href="seo-services.html">Services</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           <a href="privacy-policy.html">Privacy Policy</a>
