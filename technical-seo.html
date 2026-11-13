@@ -15,7 +15,7 @@
     <title>Technical SEO Guide for Beginners | SEO Growth Hub</title>
     <meta name="description" content="Learn technical SEO basics, including website crawling, indexing, mobile usability, HTTPS, page speed, and broken links.">
     <link rel="canonical" href="https://seogrowthhub.github.io/technical-seo.html">
-  <meta property="og:type" content="article">
+  <meta name="robots" content="index, follow, max-image-preview:large">\n  <meta property="og:type" content="article">
   <meta property="og:site_name" content="SEO Growth Hub">
   <meta property="og:title" content="Technical SEO Guide for Beginners | SEO Growth Hub">
   <meta property="og:description" content="Learn technical SEO basics, including website crawling, indexing, mobile usability, HTTPS, page speed, and broken links.">
@@ -34,7 +34,7 @@
     "mainEntityOfPage": {"@type": "WebPage", "@id": "https://seogrowthhub.github.io/technical-seo.html"},
     "author": {"@type": "Organization", "name": "SEO Growth Hub"},
     "publisher": {"@type": "Organization", "name": "SEO Growth Hub", "url": "https://seogrowthhub.github.io/"},
-    "inLanguage": "en"
+    "inLanguage": "en",\n    "dateModified": "2026-11-13"
   }
   </script>
 </head>
@@ -108,7 +108,58 @@
             </ol>
             <p>These checks are a starting point, not a substitute for testing the live site. A page can have correct HTML and still be slow because of image delivery, hosting, or third-party requests.</p>
 
-            <h2>Conclusion</h2>
+
+            <h2>10. Check Core Web Vitals</h2>
+            <p>Core Web Vitals are Google's user-experience measurements for loading, responsiveness and visual stability. The main metrics are Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS). They are measured from real user experiences when enough field data is available. A lab test is useful for diagnosis, but it is not the same as field data.</p>
+            <ul>
+              <li><strong>LCP:</strong> measures when the main content has likely loaded. Large hero images, slow servers and render-blocking resources can delay it.</li>
+              <li><strong>INP:</strong> measures how quickly a page responds to user interactions. Heavy JavaScript can make interactions feel delayed.</li>
+              <li><strong>CLS:</strong> measures unexpected layout movement. Set image dimensions and reserve space for embeds or ads to reduce shifting.</li>
+            </ul>
+            <p>Use <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a> to review available field data and lab diagnostics. If there is no field data for a low-traffic page, treat the lab result as a diagnostic rather than a real-user score.</p>
+
+            <h2>11. How to Diagnose an Indexing Problem</h2>
+            <ol>
+              <li>Open the exact page URL in a browser and confirm it returns the intended content.</li>
+              <li>Open Google Search Console and use URL Inspection for that exact URL.</li>
+              <li>Check whether crawling is allowed and whether a noindex directive is present.</li>
+              <li>Compare the declared canonical with Google's selected canonical.</li>
+              <li>Review the last crawl date and any page-fetch errors.</li>
+              <li>If the page is eligible and has changed, use the live test and request indexing in Search Console.</li>
+            </ol>
+            <p>Requesting indexing is a request, not a guarantee. Google decides whether and when to crawl and index a URL. A page can be crawled but not indexed if it is not considered useful or sufficiently distinct from other pages.</p>
+
+            <h2>12. Sitemap and Robots.txt: Different Jobs</h2>
+            <p>A sitemap helps search engines discover the canonical URLs you want considered for indexing. A robots.txt file controls crawler access to paths. Robots.txt does not reliably remove a URL from search results, and it is not a way to protect private information. Do not block a page in robots.txt if Google needs to crawl it to see a noindex directive.</p>
+            <p>Keep the sitemap current: include preferred, working URLs; remove redirects and error pages; and update last-modified dates only when the page has meaningfully changed. Submit the sitemap in Search Console and check for processing errors.</p>
+
+            <h2>13. Mobile-First Technical Checks</h2>
+            <ul>
+              <li>Use a responsive viewport and a layout that fits narrow screens.</li>
+              <li>Keep body text readable without zooming and avoid horizontal scrolling.</li>
+              <li>Make navigation, buttons and form controls easy to tap.</li>
+              <li>Use appropriately sized images and lazy-load images below the first screen.</li>
+              <li>Prioritize the main visible image and avoid loading unnecessary third-party scripts.</li>
+              <li>Test important pages on an actual phone as well as with browser developer tools.</li>
+            </ul>
+
+            <h2>14. A Monthly Technical SEO Routine</h2>
+            <ol>
+              <li>Check Search Console for indexing, sitemap and Core Web Vitals reports.</li>
+              <li>Test key landing pages and important navigation links.</li>
+              <li>Review recently added pages for canonical, robots and status-code problems.</li>
+              <li>Check mobile loading and fix the largest bottlenecks first.</li>
+              <li>Review analytics to see which landing pages attract engaged visitors.</li>
+              <li>Keep a short change log so you can compare performance before and after updates.</li>
+            </ol>
+
+            <h2>Official Technical SEO References</h2>
+            <ul>
+              <li><a href="https://developers.google.com/search/docs/crawling-indexing/overview" target="_blank" rel="noopener">Google crawling and indexing overview</a>.</li>
+              <li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" target="_blank" rel="noopener">Google sitemap guidance</a>.</li>
+              <li><a href="https://web.dev/articles/vitals" target="_blank" rel="noopener">Web Vitals overview</a>.</li>
+            </ul>
+\n            <h2>Conclusion</h2>
             <p>Technical SEO helps search engines access and understand your website. Start with accessible pages, mobile usability, HTTPS, working links, and Search Console. Review your website regularly and fix issues as they appear.</p>
         
             <h2>Related SEO Guides</h2>
